@@ -1,85 +1,186 @@
-# AI Mock Interviewer
+AI-Powered Interview Simulator
 
-This project is a full-stack application featuring a React frontend and a Node.js backend.
+A web-based AI interview training platform designed to help users prepare for real-world interviews through behavioral interviews, technical coding challenges, resume analysis, and performance tracking.
 
-## Final Project Structure
+Overview
 
-- **/frontend**: Contains the React + Vite frontend application.
-- **/backend**: Contains the Node.js + Express backend server.
+The AI Interview Simulator provides an immersive interview-preparation experience with role-specific mock interviews, AI-generated coding challenges and quizzes, ATS-style resume analysis, and performance insights.
 
----
+The platform is powered by Google Gemini and uses a full-stack architecture where AI operations are handled securely through the backend.
 
-## Important: Clean Up Old Files
+Key Features
 
-After these changes, your project root will have old files mixed with the new `frontend` and `backend` directories. **You must manually delete the old files and directories from the project root** to avoid errors and confusion.
+🎤 Mock Interviews
 
-**DELETE the following from your project's root directory:**
+Role-specific interview simulations
 
-- `App.tsx`
-- `constants.ts`
-- `index.html`
-- `index.tsx`
-- `metadata.json`
-- `package.json`
-- `server.js`
-- `tsconfig.json`
-- `tsconfig.node.json`
-- `types.ts`
-- `vite.config.ts`
-- The `components/` directory
-- The `contexts/` directory
-- The `hooks/` directory
-- The `server/` directory
-- The `services/` directory
-- `services/geminiService.ts`
-- `services/authService.ts`
-- The `supabase/` directory (if it exists)
-- `.env.example` (if it exists)
+Timed technical and behavioral interview sessions
 
----
+AI-generated interview questions
 
-## Backend Setup
+Real-time AI feedback
 
-1.  **Navigate to the backend directory:**
-    ```sh
-    cd backend
-    ```
+Interview evaluation and performance analysis
 
-2.  **Install dependencies:**
-    ```sh
-    npm install
-    ```
+💻 Coding & Quizzes
 
-3.  **Create an environment file:**
-    Copy the `backend/.env.example` to a new file named `backend/.env`.
+AI-generated DSA coding challenges
 
-4.  **Fill in your environment variables** in the `.env` file with your credentials from Google AI Studio and your Supabase project.
+Multiple-choice questions
 
-5.  **Set up your Supabase database:**
-    Go to your Supabase project's SQL Editor and run the entire script from `backend/supabase/schema.sql`. This will create the necessary tables, policies, and triggers.
+Code review and evaluation
 
-6.  **Start the backend server:**
-    ```sh
-    npm start
-    ```
-    The server will run on `http://localhost:3001`.
+Instant feedback
 
----
+Technical interview practice
 
-## Frontend Setup
+📄 ATS Resume Scanner
 
-1.  **Navigate to the frontend directory** in a new terminal window:
-    ```sh
-    cd frontend
-    ```
+Upload or paste a resume
 
-2.  **Install dependencies:**
-    ```sh
-    npm install
-    ```
+Resume compatibility analysis
 
-3.  **Start the frontend development server:**
-    ```sh
-    npm run dev
-    ```
-    The application will be accessible at the local URL provided by Vite (usually `https://localhost:5173`). The Vite server is pre-configured to proxy API requests to the backend.
+ATS-style scoring
+
+Suggestions for improving resume content
+
+Identification of missing or weak areas
+
+📊 Performance Dashboard
+
+Review previous interview sessions
+
+Track interview performance
+
+Analyze speaking pace and filler words
+
+Review coding reports
+
+Monitor improvement over time
+
+Technology Stack
+
+Frontend
+
+React
+
+TypeScript
+
+Vite
+
+Tailwind CSS
+
+WebRTC
+
+Web Speech API
+
+Backend
+
+Node.js
+
+Express.js
+
+JWT-secured APIs
+
+Server-side AI processing
+
+Database & Authentication
+
+Supabase
+
+Supabase Authentication
+
+Supabase Database
+
+Supabase Admin
+
+AI
+
+Google Gemini
+
+Gemini 2.5 Flash
+
+Gemini SDK
+
+AI-powered interview generation and evaluation
+
+AI-assisted resume analysis
+
+AI-assisted code evaluation
+
+Architecture
+
+User
+  ↓
+React + TypeScript Frontend
+  ↓
+Secure Backend APIs
+  ↓
+Node.js + Express
+  ↓
+Google Gemini
+  ↓
+AI Interview / Resume / Code Analysis
+  ↓
+Supabase
+  ↓
+Reports & Session Data
+
+Privacy-Oriented Design
+
+The frontend communicates with the backend rather than directly exposing sensitive AI operations.
+
+User
+  ↓
+Frontend
+  ↓
+Backend API
+  ├── Authentication
+  ├── Interview Processing
+  ├── Resume Analysis
+  ├── Code Evaluation
+  └── Gemini Integration
+       ↓
+     Gemini
+
+Core User Flow
+
+User signs up and completes profile setup.
+
+User selects an interview role or preparation area.
+
+The platform starts a role-specific AI interview or coding session.
+
+Gemini generates questions and evaluates responses.
+
+Resume analysis can be performed through the ATS scanner.
+
+Session results are stored securely.
+
+The performance dashboard presents previous reports and improvement areas.
+
+AI Capabilities
+
+The platform uses Gemini to support:
+
+Interview question generation
+
+Behavioral interview simulations
+
+Technical interview simulations
+
+Coding challenge generation
+
+Code evaluation
+
+Resume analysis
+
+Interview feedback
+
+Performance analysis
+
+Why This Project
+
+Traditional interview preparation often requires separate tools for mock interviews, coding practice, resume checking, and performance tracking.
+
+This project combines these workflows into a single AI-powered platform so users can practice, receive feedback, analyze their resume, and track their progress in one place.
